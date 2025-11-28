@@ -126,10 +126,12 @@
     <ClCompile Include="alg_l2.cpp" />
     <ClCompile Include="AVL.cpp" />
     <ClCompile Include="BST.cpp" />
+    <ClCompile Include="RB.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVL.h" />
     <ClInclude Include="BST.h" />
+    <ClInclude Include="RB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

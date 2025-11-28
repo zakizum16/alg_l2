@@ -1,6 +1,7 @@
 ﻿
 #include"BST.h"
 #include"AVL.h"
+#include"RB.h"
 #include <iostream>
 using namespace std;
 void checkBST()
@@ -103,6 +104,34 @@ void checkAVL() {
     randomTree.levelorder();
 
 }
+void checkRB() {
+    RBTree tree;
+
+
+    tree.insert(10);
+    tree.insert(20);
+    tree.insert(30);
+    tree.insert(15);
+    tree.insert(25);
+    tree.insert(5);
+    tree.insert(35);
+
+    tree.inorder();
+    tree.preorder();
+    tree.postorder();
+    tree.levelorderStr();
+    tree.levelorder();
+    cout << "Поиск 15: " << (tree.search(15) ? "Найдено" : "Не найдено") << endl;
+    cout << "Поиск 100: " << (tree.search(100) ? "Найдено" : "Не найдено") << endl;
+    tree.findMin();
+    tree.findMax();
+    tree.printTree();
+    tree.remove(15);
+    tree.inorder();
+    tree.remove(30);
+    tree.inorder();
+    tree.levelorder();
+}
 int main()
 {
     system("chcp 65001 > nul");
@@ -118,5 +147,6 @@ int main()
     cout << "\n";
     checkAVL();
     checkBST();
+    checkRB();
     return 0;
 }
