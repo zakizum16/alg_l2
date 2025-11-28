@@ -1,25 +1,17 @@
 #include "BST.h"
-#include "BST.h"
 #include <iostream>
 #include <vector>
 #include <random>
 using namespace std;
-
-// Реализация структуры Node
 BST::Node::Node(int value) : data(value), LeftChild(nullptr), RightChild(nullptr) {}
-
 BST::Node::~Node() {
     delete LeftChild;
     delete RightChild;
 }
-
-// Реализация методов класса BST
 BST::BST() : root(nullptr) {}
-
 BST::~BST() {
     delete root;
 }
-
 void BST::insert(int value) {
     root = insert_recursive(root, value);
 }
@@ -176,7 +168,6 @@ void BST::postorder() {
     cout << endl;
 }
 
-// Приватные методы
 int BST::tree_height(Node* node) {
     if (!node) return 0;
     return 1 + max(tree_height(node->LeftChild), tree_height(node->RightChild));
@@ -216,7 +207,6 @@ void BST::preorder_recursive(Node* node) {
         preorder_recursive(node->RightChild);
     }
 }
-
 void BST::postorder_recursive(Node* node) {
     if (node != nullptr) {
         postorder_recursive(node->LeftChild);
@@ -224,7 +214,6 @@ void BST::postorder_recursive(Node* node) {
         cout << node->data << " ";
     }
 }
-
 BST::Node* BST::del_recursive(Node* node, int value) {
     if (node == nullptr) {
         cout << "Значение " << value << " не найдено в дереве.\n";
@@ -249,30 +238,25 @@ BST::Node* BST::del_recursive(Node* node, int value) {
             delete node;
             return temp;
         }
-
         Node* temp = node->RightChild;
         while (temp && temp->LeftChild != nullptr) {
             temp = temp->LeftChild;
         }
-
         node->data = temp->data;
         node->RightChild = del_recursive(node->RightChild, temp->data);
     }
     cout << "Значение " << value << " удалено из дерева.\n";
     return node;
 }
-
 BST::Node* BST::insert_recursive(Node* node, int value) {
     if (node == nullptr) {
         return new Node(value);
     }
-
     if (value < node->data) {
         node->LeftChild = insert_recursive(node->LeftChild, value);
     }
     else if (value > node->data) {
         node->RightChild = insert_recursive(node->RightChild, value);
     }
-
     return node;
 }
