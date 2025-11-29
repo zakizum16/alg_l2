@@ -3,7 +3,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fa36a030-c9b4-47e8-90dc-3c83e83672be</ProjectGuid>
-    <ProjectHome>..\PythonApplication1\</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>AVL_and_RB_Exp.py</StartupFile>
     <SearchPath>
     </SearchPath>
