@@ -7,7 +7,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "alg_l2", "alg_l2.vcxproj", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Experimets", "..\PythonApplication1\Experimets.pyproj", "{FA36A030-C9B4-47E8-90DC-3C83E83672BE}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Experimets", "Experimets.pyproj", "{FA36A030-C9B4-47E8-90DC-3C83E83672BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
