@@ -2,6 +2,7 @@
 #include"BST.h"
 #include"AVL.h"
 #include"RB.h"
+
 #include <iostream>
 using namespace std;
 void checkBST()
@@ -106,8 +107,6 @@ void checkAVL() {
 }
 void checkRB() {
     RBTree tree;
-
-
     tree.insert(10);
     tree.insert(20);
     tree.insert(30);
@@ -115,7 +114,6 @@ void checkRB() {
     tree.insert(25);
     tree.insert(5);
     tree.insert(35);
-
     tree.inorder();
     tree.preorder();
     tree.postorder();
